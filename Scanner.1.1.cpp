@@ -4,6 +4,7 @@
 #include <SFML/Network.hpp>
 #include <sstream>
 #include <string>
+#include <vector>
 
 static bool port_is_open(const std::string& address, int port)
 {
