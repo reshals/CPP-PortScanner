@@ -45,7 +45,7 @@ template <typename T>
 static std::vector<T> range(T min, T max)
 {
     if (min > max)
-        swap(min, max)
+        swap(min, max);
     if (min == max)
         return std::vector<T>(1, min);
     std::vector<T> values;
@@ -85,7 +85,7 @@ static T maximum(const std::vector<T>& values)
         if (value > max)
             max = value;
     }
-    return max
+    return max;
 }
 
 template <typename T>
@@ -114,7 +114,8 @@ int main(int argc, char* argv[])
         std::getline(std::cin, address);
         std::cout << "Port: " << std::flush;
         std::getline(std::cin, port_list);
-        ports = parse_ports_list(port_list)
+        ports = parse_ports_list(port_list);
+    }
     std::cout << "Showing open ports on " << address << "...\n";
     size_t width = digits(maximum(ports));
     for (int port : ports) {
